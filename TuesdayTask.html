@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25-10-2022 Tuesday</title>
+</head>
+<body>
+    
+<script>
+
+// program 1 : removing element in array
+function remove_array_element(array, n)
+ {
+    const index = array.indexOf(n);
+    array.splice(index, 1);
+    return array;
+ }
+
+console.log(remove_array_element([2, 5, -2, 6], -2));
+
+////////////////////////////////////////////////////////////////////////////////
+
+// program 2 : program to list the properties of a JavaScript object
+
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+
+var x;
+x=student;
+console.log(Object.keys(x));
+
+////////////////////////////////////////////////////////////////////////////////
+
+// program 3 : delete the rollno property
+
+var student =  { 
+  name : "David Rayy", 
+  sclass : "VI", 
+  rollno : 12  };
+
+  console.log(student);
+  delete student.rollno;
+  console.log(student);
+
+  //////////////////////////////////////////////////////////////////////////
+
+// program 4 : JavaScript function to split a string and convert it into an array of words
+  string_to_array = function (string) {
+    return string.trim().split(" ");
+};
+console.log(string_to_array("Robin Singh"));
+
+////////////////////////////////////////////////////////////////////////////
+
+// program 5 : JavaScript program to sort the items of an array in ascending order
+
+var arr1=[-3,8,7,6,5,-4,3,2,1];
+var arr2=[];
+var min=arr1[0];
+max=arr1[0];
+var position;
+for (i=0; i<arr1.length; i++)
+{
+        if (max<arr1[i]) max=arr1[i];
+}
+
+for (var i=0;i<arr1.length;i++)
+{
+        for (var j=0;j<arr1.length;j++)
+        {
+                if (arr1[j]!="String")
+                {
+                        if (min>arr1[j]) 
+                        {
+                                min=arr1[j];
+                                position=j;
+                        }
+                }
+        }
+        arr2[i]=min;
+        arr1[position]="String";
+        min=max;
+}
+console.log(arr2);
+
+////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+
+
+</body>
+</html>
